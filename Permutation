@@ -1,0 +1,24 @@
+import java.util.HashSet;
+import java.util.Set;
+
+class permutation {
+	
+	public int solution(int[] A) {
+
+        final Set permmutation = new HashSet();
+        final int l = A.length;
+
+        for(int i : A)
+        {
+            if(i > l)
+                return 0;
+
+            permmutation.add(i);
+        }
+
+        if(permmutation.size() == A.length)
+            return 1;
+        else
+            return 0;
+    }
+}
